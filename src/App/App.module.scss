@@ -1,0 +1,21 @@
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  margin: 3rem;
+}
+
+.item {
+  margin: 3rem;
+  max-width: 100%;
+  border: 1px solid black;
+  min-height: 200px;
+
+  img {
+    width: 30%;
+    height: 200px;
+  }
+  .title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+  }
+}
