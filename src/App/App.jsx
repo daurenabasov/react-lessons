@@ -7,7 +7,7 @@ import Card from "../Components/UI/Cards/Card";
 
 const App = () => {
 
-  const cats = [
+  const cats = [ // создаю фэйковые данные 
     {
       id: 1,
       title: "Cat 1",
@@ -38,7 +38,8 @@ const App = () => {
       <Header />
       <h1>Catalog</h1>
       {
-        cats.map((cat) =>
+        // обращаюсь к массиву и прохожусь по нему отрисовывая компонент Card 
+        cats.map((cat) => // cat - это каждый элемент массива, а точнее обьект 
         (
           <Card Title={cat.title} price={cat.price} />
         )
