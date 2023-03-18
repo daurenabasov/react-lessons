@@ -1,25 +1,10 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { POSTS_URL } from '../Constants/api';
+import React from "react";
+import RouteApp from "../Routes/RouteApp";
 
 const App = () => {
-
-  const [data, setData] = useState([])
-  console.log(data);
-
-  const getData = async () => {
-    const response = await axios.get(POSTS_URL)
-    setData(response.data)
-  }
-
-
-  useEffect(() => {
-    getData()
-  }, [])
-
   return (
     <div>
-        
+      <RouteApp />
     </div>
   );
 };
