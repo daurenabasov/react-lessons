@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <Header Header="header" />
+      <Header />
       <h1>Catalog</h1>
       {
         // обращаюсь к массиву и прохожусь по нему отрисовывая компонент Card 

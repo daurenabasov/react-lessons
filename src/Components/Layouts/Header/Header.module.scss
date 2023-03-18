@@ -1,5 +1,18 @@
 .header {
   max-width: 100%;
   min-height: 80px;
-  background: blue($color: #5da9d2);
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    li {
+      color: antiquewhite;
+    }
+  }
 }
