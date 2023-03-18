@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Layouts/Header/Header";
 import Footer from "../Components/Layouts/Footer/Footer";
 import Card from "../Components/UI/Cards/Card";
+import Counter from "../Components/Layouts/Counter";
 
 const App = () => {
   const cats = [ // создаю фэйковые данные 
@@ -34,6 +35,7 @@ const App = () => {
     <>
       <Header />
       <h1>Catalog</h1>
+      <Counter />
       {
         // обращаюсь к массиву и прохожусь по нему отрисовывая компонент Card 
         cats.map((cat) => // cat - это каждый элемент массива, а точнее обьект 
