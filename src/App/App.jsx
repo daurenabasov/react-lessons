@@ -1,12 +1,9 @@
 import React from "react";
-import Header from "../Components/Layouts/Header";
-import Footer from "../Components/Layouts/Footer";
-import Cat from "../Assets/cat.jpg";
-import s from "./App.module.scss";
+import Header from "../Components/Layouts/Header/Header";
+import Footer from "../Components/Layouts/Footer/Footer";
 import Card from "../Components/UI/Cards/Card";
 
 const App = () => {
-
   const cats = [ // создаю фэйковые данные 
     {
       id: 1,
@@ -35,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header Header="header" />
       <h1>Catalog</h1>
       {
         // обращаюсь к массиву и прохожусь по нему отрисовывая компонент Card 
@@ -45,6 +42,8 @@ const App = () => {
         )
         )
       }
+
+
       <Footer />
     </>
   );
