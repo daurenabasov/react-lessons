@@ -1,53 +1,26 @@
-import React from "react";
-import Header from "../Components/Layouts/Header/Header";
-import Footer from "../Components/Layouts/Footer/Footer";
-import Card from "../Components/UI/Cards/Card";
-import Counter from "../Components/Layouts/Counter";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { POSTS_URL } from '../Constants/api';
 
 const App = () => {
-  const cats = [ // создаю фэйковые данные 
-    {
-      id: 1,
-      title: "Cat 1",
-      price: 10,
-    },
-    {
-      id: 2,
-      title: "Cat 2",
-      price: 10,
-    }, {
-      id: 3,
-      title: "Cat 3",
-      price: 10,
-    }, {
-      id: 4,
-      title: "Cat 4",
-      price: 10,
-    }, {
-      id: 5,
-      title: "Cat 5",
-      price: 10,
-    }
-  ]
 
+  const [data, setData] = useState([])
+  console.log(data);
+
+  const getData = async () => {
+    const response = await axios.get(POSTS_URL)
+    setData(response.data)
+  }
+
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
-    <>
-      <Header />
-      <h1>Catalog</h1>
-      <Counter />
-      {
-        // обращаюсь к массиву и прохожусь по нему отрисовывая компонент Card 
-        cats.map((cat) => // cat - это каждый элемент массива, а точнее обьект 
-        (
-          <Card Title={cat.title} price={cat.price} />
-        )
-        )
-      }
-
-
-      <Footer />
-    </>
+    <div>
+        
+    </div>
   );
 };
 
